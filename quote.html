@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+</head>
+<body>
+    <h1>simple quote generator</h1>
+    <div id="quoteDisplay">
+
+    </div>
+    <button onClick="newQuote()">New Quotes</button>
+    <script>
+        var quotes=[
+            'the way get started is to quit talking and begin doing,-walt disney',
+            'the pessimist sees difficulty in every opportunity the optimist sees the opportunity in every difficulty -winston chruchill',
+            'Ask and it will be given to you; search, and you will find; knock and the door will be opened for you',
+            'There is only one way to avoid criticism: do nothing, say nothing, and be nothing',
+            'Life shrinks or expands in proportion to one’s courage',
+            'The best revenge is massive success',
+            'Whatever you can do, or dream you can, begin it.  Boldness has genius, power and magic in it',
+            'The two most important days in your life are the day you are born and the day you find out why.',
+            'The only person you are destined to become is the person you decide to be',
+            'Believe you can and you’re halfway there.',
+            'How wonderful it is that nobody need wait a single moment before starting to improve the world.',
+            'Life is not measured by the number of breaths we take, but by the moments that take our breath away.'
+          ]
+          function newQuote(){
+              var randomNumber=Math.floor(Math.random() * (quotes.length));
+              document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+          }
+    </script>
+</body>
+</html>
